@@ -58,5 +58,7 @@ stages:
       - task: ShellScript@2
         displayName: update K8s Manifests
         inputs:
-          scriptPath: 'scripts/updateK8sManifests.sh'
+          scriptPath: 'updateK8sManifests.sh'
           args: 'vote $(imageRepository) $(tag)'
+          disableAutoCwd: true
+          cwd: 'scripts/'
