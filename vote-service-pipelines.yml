@@ -55,6 +55,7 @@ stages:
   - job: Update
     displayName: Update
     steps:
+      - checkout: self
       - task: ShellScript@2
         displayName: update K8s Manifests
         inputs:
